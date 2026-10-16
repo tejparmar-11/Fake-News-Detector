@@ -1,0 +1,412 @@
+@import "tailwindcss";
+
+/* ── Custom Properties ──────────────────────────────────── */
+:root {
+  --navy: #0A0F1E;
+  --navy-light: #0f1629;
+  --navy-card: #111827;
+  --blue: #1E90FF;
+  --blue-dim: #1565c0;
+  --blue-glow: rgba(30, 144, 255, 0.35);
+  --red: #FF4C4C;
+  --red-glow: rgba(255, 76, 76, 0.35);
+  --green: #00E676;
+  --green-glow: rgba(0, 230, 118, 0.35);
+  --text: #E2E8F0;
+  --text-dim: #94A3B8;
+  --border: rgba(30, 144, 255, 0.18);
+}
+
+/* ── Reset & Base ───────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--navy);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--navy);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--blue-dim);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue);
+}
+
+/* Selection */
+::selection {
+  background: var(--blue-glow);
+  color: #fff;
+}
+
+/* ── Typography ─────────────────────────────────────────── */
+.font-orbitron {
+  font-family: 'Orbitron', monospace;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+/* ── Glassmorphism ──────────────────────────────────────── */
+.glass {
+  background: rgba(17, 24, 39, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+.glass-strong {
+  background: rgba(15, 22, 41, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+/* ── Glow Effects ───────────────────────────────────────── */
+.glow-blue {
+  box-shadow: 0 0 20px var(--blue-glow), 0 0 60px rgba(30, 144, 255, 0.1);
+}
+
+.glow-red {
+  box-shadow: 0 0 20px var(--red-glow), 0 0 60px rgba(255, 76, 76, 0.1);
+}
+
+.glow-green {
+  box-shadow: 0 0 20px var(--green-glow), 0 0 60px rgba(0, 230, 118, 0.1);
+}
+
+.text-glow-blue {
+  text-shadow: 0 0 20px var(--blue-glow);
+}
+
+.text-glow-red {
+  text-shadow: 0 0 20px var(--red-glow);
+}
+
+.text-glow-green {
+  text-shadow: 0 0 20px var(--green-glow);
+}
+
+/* ── Buttons ────────────────────────────────────────────── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, var(--blue), var(--blue-dim));
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px var(--blue-glow);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px var(--blue-glow);
+  filter: brightness(1.15);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: transparent;
+  color: var(--blue);
+  border: 1.5px solid var(--blue);
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-secondary:hover {
+  background: var(--blue-glow);
+  transform: translateY(-2px);
+}
+
+/* ── Gradient Text ──────────────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, var(--blue), #7C3AED);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-red {
+  background: linear-gradient(135deg, var(--red), #FF8C00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-green {
+  background: linear-gradient(135deg, var(--green), #00BCD4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Cards ──────────────────────────────────────────────── */
+.feature-card {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--blue);
+  box-shadow: 0 12px 40px var(--blue-glow);
+}
+
+/* ── Verdict Badges ─────────────────────────────────────── */
+.verdict-real {
+  background: linear-gradient(135deg, rgba(0, 230, 118, 0.15), rgba(0, 188, 212, 0.1));
+  border: 2px solid var(--green);
+  color: var(--green);
+  border-radius: 16px;
+}
+
+.verdict-fake {
+  background: linear-gradient(135deg, rgba(255, 76, 76, 0.15), rgba(255, 140, 0, 0.1));
+  border: 2px solid var(--red);
+  color: var(--red);
+  border-radius: 16px;
+}
+
+/* ── Ticker ─────────────────────────────────────────────── */
+@keyframes ticker-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.ticker-track {
+  display: flex;
+  gap: 0;
+  width: max-content;
+  animation: ticker-scroll 60s linear infinite;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+/* ── Stats bar pulse ────────────────────────────────────── */
+@keyframes count-pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* ── Spinner ────────────────────────────────────────────── */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(30, 144, 255, 0.2);
+  border-top-color: var(--blue);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+/* ── Pulse dot ──────────────────────────────────────────── */
+@keyframes pulse-dot {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.4;
+    transform: scale(0.8);
+  }
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--green);
+  animation: pulse-dot 1.5s ease-in-out infinite;
+}
+
+/* ── Score bar animation ────────────────────────────────── */
+@keyframes fill-bar {
+  from {
+    width: 0;
+  }
+}
+
+.score-bar-inner {
+  height: 100%;
+  border-radius: 4px;
+  animation: fill-bar 1s ease-out forwards;
+}
+
+/* ── Page transitions ───────────────────────────────────── */
+.page-enter {
+  animation: fadeSlideUp 0.4s ease-out;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Step cards ─────────────────────────────────────────── */
+.step-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  padding: 32px 24px;
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px var(--blue-glow);
+  border-color: var(--blue);
+}
+
+.step-number {
+  position: absolute;
+  top: -16px;
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, var(--blue), #7C3AED);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  box-shadow: 0 0 16px var(--blue-glow);
+}
+
+/* ── Highlighted text ───────────────────────────────────── */
+.highlight-fake {
+  background: rgba(255, 76, 76, 0.2);
+  color: #FF8080;
+  border-radius: 3px;
+  padding: 0 3px;
+}
+
+.highlight-credible {
+  background: rgba(0, 230, 118, 0.15);
+  color: var(--green);
+  border-radius: 3px;
+  padding: 0 3px;
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 10px 20px;
+    font-size: 0.875rem;
+  }
+}
+
+body {
+  margin: 0;
+  background: #0a0f1e;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.glass {
+  background: rgba(17, 24, 39, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.btn {
+  background: linear-gradient(135deg, #1E90FF, #7C3AED);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}

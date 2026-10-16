@@ -1,0 +1,28 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+fastapi
+uvicorn[standard]
+sqlalchemy
+alembic
+pydantic
+pydantic-settings
+python-multipart
+httpx
+scikit-learn
+numpy
+scipy
+Pillow
+python-dotenv
+aiofiles
+faker
+gnews
+# New dependencies for NLP:
+transformers>=4.35.0
+torch
+torchvision
+torchaudio
+datasets>=2.14.0
+spacy>=3.6.0
+selenium
+beautifulsoup4
+webdriver-manager
+ollama

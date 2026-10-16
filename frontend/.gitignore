@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+node_modules/
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+dist/
+build/
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Large local dataset
+backend/data/large_fake_news_dataset.csv

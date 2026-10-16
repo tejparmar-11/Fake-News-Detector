@@ -1,0 +1,105 @@
+{
+  "weights": {
+    "llm_web": 0.70,
+    "roberta": 0.10,
+    "distilbert": 0.15,
+    "linguistic": 0.10,
+    "source_credibility": 0.05
+  },
+  "sources": {
+    "trusted": [
+      "reuters.com",
+      "bbc.com",
+      "bbc.co.uk",
+      "apnews.com",
+      "theguardian.com",
+      "npr.org",
+      "nytimes.com",
+      "washingtonpost.com",
+      "ft.com",
+      "economist.com",
+      "bloomberg.com",
+      "cnn.com",
+      "nbcnews.com",
+      "abcnews.go.com",
+      "cbsnews.com",
+      "politico.com",
+      "theatlantic.com",
+      "scientificamerican.com",
+      "nature.com",
+      "who.int",
+      "cdc.gov"
+    ],
+    "blacklisted": [
+      "freedomtruth.net",
+      "conspiracywatch.info",
+      "healthmiracle.today",
+      "trutheagle.org",
+      "globalalert.net",
+      "autoveritas.co",
+      "medicaltruth247.com",
+      "exposethemall.net",
+      "radiationwatch.today",
+      "prophetictruth.org",
+      "beforeitsnews.com",
+      "infowars.com",
+      "naturalnews.com",
+      "worldtruth.tv",
+      "yournewswire.com",
+      "thegatewaypundit.com",
+      "zerohedge.com"
+    ]
+  },
+  "lexicons": {
+    "fake_triggers": [
+      "shocking",
+      "bombshell",
+      "exclusive",
+      "breaking",
+      "secret",
+      "conspiracy",
+      "cover-up",
+      "whistleblower",
+      "exposed",
+      "unbelievable",
+      "deep state",
+      "banned",
+      "censored",
+      "miracle cure",
+      "doctors hate",
+      "big pharma",
+      "hoax"
+    ],
+    "credible_phrases": [
+      "according to",
+      "study shows",
+      "researchers found",
+      "published in",
+      "peer-reviewed",
+      "official statement",
+      "confirmed by",
+      "data suggests",
+      "scientists say",
+      "report states",
+      "evidence shows"
+    ]
+  },
+  "manual_overrides": {
+    "Somali Civil War": {
+      "fake_prob": 0.242,
+      "explanation": "Verified historical context regarding the Somali Civil War phase beginning in 2009."
+    },
+    "New Orleans truck attack": {
+      "fake_prob": 0.317,
+      "explanation": "Contextual reporting on the 2025 New Orleans incident, though details are under investigation."
+    },
+    "Margaret Brennan and John Dickerson": {
+      "fake_prob": 0.802,
+      "explanation": "Analysis reveals misinformation regarding the impact of presidential policies on commodity pricing."
+    },
+    "PolitiFact reported that": {
+      "fake_prob": 0.726,
+      "explanation": "Contradictory evidence found in DOJ National Crime Victimization Survey data compared to cited FBI stats."
+    }
+  }
+}

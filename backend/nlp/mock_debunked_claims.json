@@ -1,0 +1,82 @@
+[
+    {
+        "text": "The COVID-19 vaccine causes 5G microchip activation in human blood.",
+        "claimant": "Social Media Posts",
+        "factCheckDate": "2021-06-15",
+        "publisher": "Snopes",
+        "url": "https://www.snopes.com/fact-check/covid-vaccine-microchip/",
+        "rating": "False"
+    },
+    {
+        "text": "Moon landing was staged in the Nevada desert by Stanley Kubrick.",
+        "claimant": "Conspiracy Theorists",
+        "factCheckDate": "1994-01-01",
+        "publisher": "FactCheck.org",
+        "url": "https://www.factcheck.org/2019/07/penn-didnt-say-moon-landing-was-staged/",
+        "rating": "False"
+    },
+    {
+        "text": "Eating raw garlic every morning cures cancer instantly.",
+        "claimant": "Viral Messages",
+        "factCheckDate": "2020-03-01",
+        "publisher": "AFP Fact Check",
+        "url": "https://factcheck.afp.com/garlic-wont-cure-cancer",
+        "rating": "False"
+    },
+    {
+        "text": "Government secretly adding fluoride to water to control minds.",
+        "claimant": "Alex Jones",
+        "factCheckDate": "2015-08-20",
+        "publisher": "Full Fact",
+        "url": "https://fullfact.org/health/fluoride-minds/",
+        "rating": "False"
+    },
+    {
+        "text": "Electric vehicles spontaneously explode when driven above 60mph.",
+        "claimant": "Unknown",
+        "factCheckDate": "2022-11-05",
+        "publisher": "PolitiFact",
+        "url": "https://www.politifact.com/factchecks/ev-explosions/",
+        "rating": "False"
+    },
+    {
+        "text": "Drinking bleach solution kills coronavirus instantly.",
+        "claimant": "Internet Forwards",
+        "factCheckDate": "2020-04-20",
+        "publisher": "WHO",
+        "url": "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters",
+        "rating": "Pants on Fire"
+    },
+    {
+        "text": "5G towers emit radiation that shrinks brain cells.",
+        "claimant": "Viral Videos",
+        "factCheckDate": "2020-05-10",
+        "publisher": "AFP Fact Check",
+        "url": "https://factcheck.afp.com/5g-radiation-brain-cells",
+        "rating": "False"
+    },
+    {
+        "text": "Ancient Mayan calendar predicts asteroid collision in 2025.",
+        "claimant": "Various Blogs",
+        "factCheckDate": "2023-01-15",
+        "publisher": "NASA JPL",
+        "url": "https://www.jpl.nasa.gov/asteroid-watch/",
+        "rating": "False"
+    },
+    {
+        "text": "Celebrity was replaced by a clone in 2004.",
+        "claimant": "Twitter Accounts",
+        "factCheckDate": "2018-09-09",
+        "publisher": "Snopes",
+        "url": "https://www.snopes.com/fact-check/celebrity-clone/",
+        "rating": "False"
+    },
+    {
+        "text": "New study shows Earth is actually flat and space is fake.",
+        "claimant": "Flat Earth Society",
+        "factCheckDate": "2019-12-01",
+        "publisher": "SciCheck",
+        "url": "https://www.factcheck.org/flat-earth-debunked/",
+        "rating": "False"
+    }
+]

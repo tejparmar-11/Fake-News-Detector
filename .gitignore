@@ -1,0 +1,19 @@
+
+.env
+.env.*
+!.env.example
+node_modules/
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+dist/
+build/
+
+# Ignore local database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Ignore large local dataset
+/backend/data/large_fake_news_dataset.csv
